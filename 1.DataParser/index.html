@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{*} Data Parser</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="box">
+        <div id="contenuto">
+            <h1 id="fixed-top"> DATA.PARSER {*} </h1>
+            <p>
+                Applicazione di data parsing che serve per eseguire i debug degli dataset.<br/>
+                Dev: <a href="http://paulin.al" target="_blank">Paulin Gjini</a><br/>
+                Data: Gennaio 2017
+            </p>
+            <div id="form">
+              <h2>MESSAGGI</h2>
+              <div id="areaLinkConfig"></div>
+                <h2>CONFIGURAZIONE</h2>
+                <a onclick="salvaConfigurazione()">SALVA CONFIGURAZIONE</a>
+                <div type="text" id="areaConfig"></div>
+
+                <h2>DATI</h2>
+                <div id="areaDati">DATO1DATO2DATO3</div>
+            </div>
+            <br/><br/>
+            <button class="myButton" onclick="lanciaParsing()">Esegui Parsing</button>
+            <h2>RISULTATI</h2>
+            <div id="risultati"></div>
+        </div>
+    </div>
+</body>
+<link href="lib/jsoneditor/jsoneditor.min.css" rel="stylesheet" type="text/css">
+<script src="lib/jsoneditor/jsoneditor.min.js"></script>
+<script src="lib/json2Table.js"></script>
+<script src="lib/store+json2.min.js"></script>
+<script type="text/javascript" src="dataMsgParse.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
