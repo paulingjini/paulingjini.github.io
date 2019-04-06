@@ -1,32 +1,36 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <!-- 
-    ██████╗  █████╗ ██╗   ██╗██╗     ██╗███╗   ██╗
-    ██╔══██╗██╔══██╗██║   ██║██║     ██║████╗  ██║
-    ██████╔╝███████║██║   ██║██║     ██║██╔██╗ ██║
-    ██╔═══╝ ██╔══██║██║   ██║██║     ██║██║╚██╗██║
-    ██║     ██║  ██║╚██████╔╝███████╗██║██║ ╚████║
-    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝
-    -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>paulin</title>
-
+    <link rel="shortcut icon" href="p.ico" />
+    <title>Paulin</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Quicksand" rel="stylesheet">
     <style>
+    /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:0.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+        /*
+        * font-family: 'Inconsolata', monospace;
+        * font-family: 'Quicksand', sans-serif;
+        */
+
         html {
-            font-family: 'Abel', sans-serif;
-            text-align: center;
-            line-height: 0.5;
-            margin: 0;
-            padding: 0;
-            color: black;
-            background-color: #f4f4c3;
+            background: #fff;
             -webkit-font-smoothing: antialiased;
         }
-        
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            border: 0px solid #ddd;
+        }
+
+        h1 {
+            font-size: 4em;
+            font-weight: bold;
+        }
+
         #box {
             top: 10px;
             left: 10px;
@@ -37,13 +41,16 @@
             -moz-border-left-colors: none;
             -moz-border-right-colors: none;
             -moz-border-top-colors: none;
+            background: url('https://source.unsplash.com/bU6JyhSI6zo') no-repeat;
             background-size: cover;
+            transition: 10s opacity;
             box-sizing: border-box;
             z-index: -100;
-            background-color: white;
         }
-        
+
         #contenuto {
+            background-color: trasparent;
+            color: #f3f3f3;
             display: block;
             box-sizing: border-box;
             width: 100%;
@@ -57,11 +64,11 @@
             box-shadow: none;
             resize: none;
             padding: 30px;
-            padding-top: 30%px;
+            padding-top: 10px;
             word-wrap: break-word;
-            text-shadow: 2px 2px 12px #666;
+            text-shadow: 2px 2px 12px #fff;
         }
-        
+
         #box:after {
             content: '';
             position: absolute;
@@ -69,28 +76,109 @@
             right: 0;
             bottom: 0;
             left: 0;
-            opacity: .2;
+            background-image: linear-gradient(to bottom right, black, white);
+            opacity: .4;
         }
-        
+
+        p {
+            /* font-family: 'Inconsolata', monospace;*/
+            font-size: 20px;
+        }
+
+        .mono {
+            font-family: 'Inconsolata', monospace;
+            font-size: 15px;
+        }
+
+        @keyframes example {
+            from {
+                background-color: #FFF;
+                color: #000;
+            }
+            to {
+                background-color: #000;
+                color: #FFF;
+            }
+        }
+
+        @keyframes htmlanim {
+            from {
+                background-color: #2F52E0;
+            }
+            to {
+                background-color: #BCED09;
+            }
+        }
+
+        input[type="text"] {
+            margin: 0;
+            padding: 5px;
+            font-family: 'Inconsolata', monospace;
+            appearance: none;
+            box-shadow: none;
+            border-radius: none;
+            background: trasparent;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+        }
+
+        input[type="text"] {
+            border: none;
+            border-bottom: solid 2px #8FF7A7;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="text"].focus {
+            border-bottom: solid 2px #51BBFE;
+            background: #F7FE72;
+        }
+
         a {
-            color: blue;
+            text-decoration: underline;
+            color:#f3f3f3;
         }
-        
-        h1 {
-            font-size: 60px;
-            text-transform: uppercase;
+
+        a:hover {
+            border-bottom: solid 2px #F7FE72;
+            text-decoration: none;
+            /*background: #51BBFE;*/
+            cursor: pointer;
+            color:#51BBFE;
         }
+
+        .full {
+            position: fixed;
+            /*top: 50%;
+    left: 50%;*/
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            /*transform: translateX(-50%) translateY(-50%);*/
+            background-size: cover;
+            transition: 10s opacity;
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="box"></div>
-    <section id="contenuto">
-        <h1>Paulin Gjini</h1>
-        <p>Github Repo:
-            <a href="https://github.com/paulingjini">@paulingjini</a>
-        </p>
+    <section id="box">
     </section>
+    <div id="contenuto">
+        <h1>Paulin</h1>
+        <p> Sito web personale.</p>
+        <span class="mono">
+          GITHUB: <a href="https://github.com/paulingjini" target="_blank">@paulingjini</a><br/>
+          PROJECTS:
+          1. <a href="./1.DataParser" target="_blank">DataParser</a> (Experimental): Webapp for parsing datasets.<br/>
+          <br/><br/><br/>--<br/>
+          Photo Credits: <a href="https://unsplash.com" target="_blank">unsplash.com</a>
+        </span>
     </div>
 </body>
 
